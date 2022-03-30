@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import './CreatePost.scss'
 const CreatePost = (props) => {
 
     const [user, setUser] = useState('');
@@ -18,11 +18,11 @@ const CreatePost = (props) => {
   }
 
   return (
-    <form className='PostForm' onSubmit={handleSubmit} >
+    <form className='form-row' onSubmit={handleSubmit} >
       <div>
         <label>Whatcha wanna sayy ay?</label>
         <input
-          className="form-control"
+          className="form-group col-md-6"
           type="text"
           value={body}
           onChange={(event) => setBody(event.target.value)}
@@ -31,7 +31,7 @@ const CreatePost = (props) => {
       <div>
         <label>Who wanna say it?</label>
         <input
-          className="form-control"
+          className="form-group col-md-6"
           type="text"
           value={user}
           onChange={(event) => setUser(event.target.value)}

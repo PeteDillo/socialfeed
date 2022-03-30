@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import NavBar from "./NavBar/NavBar";
 import DisplayPost from "./DisplayPost/DisplayPost";
 import CreatePost from "./CreatePost/CreatePost";
-
+import "./App.scss";
 function App() {
   const [posts, setPost] = useState([
     {
@@ -20,16 +20,14 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <div className="container">
-        <div className="row justify-content-md-center">
-          <div className="col-md-auto">
+      <div className="content">
+        <div className="formContainer">
+          <div className="form">
             <CreatePost setPost={addNewPost} />
           </div>
         </div>
-        <div className="col">
-          <div className="col col-lg-2">
+        <div className="displayContainer">
             <DisplayPost posts={posts} />
-          </div>
         </div>
       </div>
     </div>
