@@ -4,7 +4,7 @@ import React, { useState } from "react";
 function DisplayPost(props) {
 
   return (
-    <div>
+    <div className="Display">
       {props.posts.map((post) => (
         <Post post={post} />
       ))}

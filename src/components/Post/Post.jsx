@@ -1,5 +1,10 @@
 import "./Post.scss";
+import React, { useState } from 'react';
+
 const Post = (prop) => {
+const [like, setLike] = useState(false)
+const [dislike, setDislike ] = useState(false)
+
   return (
     <div className="PostCard">
       <div className="PostBody">
@@ -11,8 +16,8 @@ const Post = (prop) => {
       <div className="PostDate">
         <p>{prop.post.date}</p>
       </div>
-      <a>Like</a>
-      <a>Dislike</a>
+      <button className={"Like " + (like && "active")} onClick={()=>setLike(!like)} >Like</button>
+      <button className={"Dislike " + (dislike && "Active")} onClick={()=>setDislike(!dislike)}>Disike</button>
     </div>
   );
 };

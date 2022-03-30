@@ -18,7 +18,7 @@ const CreatePost = (props) => {
   }
 
   return (
-    <form onSubmit={handleSubmit} >
+    <form className='PostForm' onSubmit={handleSubmit} >
       <div>
         <label>Whatcha wanna sayy ay?</label>
         <input
