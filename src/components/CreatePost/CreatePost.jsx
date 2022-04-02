@@ -20,7 +20,7 @@ const CreatePost = (props) => {
   return (
     <form className='form-row' onSubmit={handleSubmit} >
       <div>
-        <label>Whatcha wanna sayy ay?</label>
+        <label>What's on your mind?</label>
         <input
           className="form-group col-md-6"
           type="text"
@@ -29,7 +29,7 @@ const CreatePost = (props) => {
         ></input>
       </div>
       <div>
-        <label>Who wanna say it?</label>
+        <label>Who is Posting?</label>
         <input
           className="form-group col-md-6"
           type="text"
